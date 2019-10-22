@@ -1,0 +1,73 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "body": [
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": 2,
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Por favor, preencha os campos abaixo:",
+              "weight": "Bolder",
+              "size": "Medium"
+            },
+            {
+              "type": "Container",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "Check-in",
+                  "wrap": true,
+                  "separator": true
+                },
+                {
+                  "type": "Input.Date",
+                  "id": "checkin"
+                }
+              ],
+              "style": "emphasis",
+              "horizontalAlignment": "Center"
+            },
+            {
+              "type": "Container",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "Check-out",
+                  "wrap": true
+                },
+                {
+                  "type": "Input.Date",
+                  "id": "checkout"
+                }
+              ],
+              "style": "emphasis"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Input.Text",
+      "placeholder": "Placeholder text",
+      "isVisible": false,
+      "value": "COTACAO_INPUT",
+      "id": "label"
+    },
+    {
+      "type": "ActionSet",
+      "actions": [
+        {
+          "type": "Action.Submit",
+          "title": "Pesquisar preços",
+          "id": "COTACAO_INPUT"
+        }
+      ]
+    }
+  ]
+}

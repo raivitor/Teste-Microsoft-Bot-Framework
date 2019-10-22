@@ -1,0 +1,56 @@
+{
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "body": [
+    {
+      "type": "ImageSet",
+      "images": [
+        {
+          "type": "Image",
+          "altText": "",
+          "horizontalAlignment": "Center",
+          "url": "http://google.com/logo.png",
+          "size": "Medium",
+          "height": "stretch"
+        }
+      ],
+      "horizontalAlignment": "Center"
+    },
+    {
+      "type": "Container",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "Descrição"
+        },
+        {
+          "type": "TextBlock",
+          "text": "Subtitle"
+        }
+      ]
+    },
+    {
+      "type": "ActionSet",
+      "actions": [
+        {
+          "type": "Action.OpenUrl",
+          "title": "Reservar agora!",
+          "url": "google.com.br"
+        },
+        {
+          "type": "Action.Submit",
+          "title": "Mais info",
+          "id": "mais_info"
+        }
+      ]
+    },
+    {
+      "type": "Input.Text",
+      "placeholder": "Placeholder text",
+      "isVisible": false,
+      "value": "COTACAO_INPUT",
+      "id": "label"
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+}

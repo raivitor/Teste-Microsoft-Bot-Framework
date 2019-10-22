@@ -1,89 +1,61 @@
-# Hotel Crawler by Next Dev from AskSuite's DreamTeam
+# botinho
 
-## Project setup
+Dominar o mundo
 
-```
-yarn install
-yarn start
-```
+This bot has been created using [Bot Framework](https://dev.botframework.com), it shows how to create a simple bot that accepts input from the user and echoes it back.
 
-OR
+## Prerequisites
 
-```
-docker-compose up
-```
+- [Node.js](https://nodejs.org) version 10.14.1 or higher
 
-## Run tests
-
-```
-yarn run test
-```
-
-## API Description
-
-Returns json data with hotel rooms.
-
-- **URL:**
-  api/buscar/
-
-- **Method:**
-  `POST`
-
-- **Data Params:**
-
-  **Required:**
-
-  ```
-  {
-    "checkin": [date],
-    "checkout": [date]
-  }
-  ```
-
-  **Example:**
-
-  ```
-  {
-    "checkin": "01/09/2019", // DD/MM/YYYY
-    "checkout": "03/09/2019"
-  }
-  ```
-
-- **Success Response:**
-
-  - **Code:** 200 <br />
-    **Content example:**
-
-    ```json
-    [
-      {
-        "name": "name 1",
-        "price": "R$ 123,90",
-        "description": "Lorem ipsum",
-        "image": ["img1.png", "img2.png"]
-      },
-      {
-        "name": "name 2",
-        "price": "R$ 456,90",
-        "description": "Lorem ipsum",
-        "image": ["img3.png", "img4.png"]
-      }
-    ]
+    ```bash
+    # determine node version
+    node --version
     ```
 
-    or empty array
+## To run the bot
 
-    ```json
-    []
+- Install modules
+
+    ```bash
+    npm install
     ```
 
-- **Sample Call:**
-  ```
-    curl -X POST \
-    http://localhost:3000/api/buscar \
-    -H 'content-type: application/json' \
-    -d '  {
-        "checkin": "02/10/2019",
-        "checkout": "05/10/2019"
-    }'
-  ```
+- Start the bot
+
+    ```bash
+    npm start
+    ```
+
+## Testing the bot using Bot Framework Emulator
+
+[Bot Framework Emulator](https://github.com/microsoft/botframework-emulator) is a desktop application that allows bot developers to test and debug their bots on localhost or running remotely through a tunnel.
+
+- Install the Bot Framework Emulator version 4.3.0 or greater from [here](https://github.com/Microsoft/BotFramework-Emulator/releases)
+
+### Connect to the bot using Bot Framework Emulator
+
+- Launch Bot Framework Emulator
+- File -> Open Bot
+- Enter a Bot URL of `http://localhost:3978/api/messages`
+
+## Deploy the bot to Azure
+
+To learn more about deploying a bot to Azure, see [Deploy your bot to Azure](https://aka.ms/azuredeployment) for a complete list of deployment instructions.
+
+
+## Further reading
+
+- [Bot Framework Documentation](https://docs.botframework.com)
+- [Bot Basics](https://docs.microsoft.com/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0)
+- [Dialogs](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-concept-dialog?view=azure-bot-service-4.0)
+- [Gathering Input Using Prompts](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-prompts?view=azure-bot-service-4.0)
+- [Activity processing](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-concept-activity-processing?view=azure-bot-service-4.0)
+- [Azure Bot Service Introduction](https://docs.microsoft.com/azure/bot-service/bot-service-overview-introduction?view=azure-bot-service-4.0)
+- [Azure Bot Service Documentation](https://docs.microsoft.com/azure/bot-service/?view=azure-bot-service-4.0)
+- [Azure CLI](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)
+- [Azure Portal](https://portal.azure.com)
+- [Language Understanding using LUIS](https://docs.microsoft.com/en-us/azure/cognitive-services/luis/)
+- [Channels and Bot Connector Service](https://docs.microsoft.com/en-us/azure/bot-service/bot-concepts?view=azure-bot-service-4.0)
+- [Restify](https://www.npmjs.com/package/restify)
+- [dotenv](https://www.npmjs.com/package/dotenv)

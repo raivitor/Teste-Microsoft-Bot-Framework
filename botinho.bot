@@ -1,0 +1,18 @@
+{
+    "name": "botinho",
+    "description": "",
+    "services": [
+        {
+            "type": "endpoint",
+            "appId": "",
+            "appPassword": "",
+            "endpoint": "http://localhost:3978",
+            "id": "69c2acb0-e6d1-11e9-adfc-0d0f8d51607c",
+            "name": "http://localhost:3978"
+        }
+    ],
+    "padlock": "",
+    "version": "2.0",
+    "overrides": null,
+    "path": "C:\\Users\\raivi\\Documents\\botinho\\botinho.bot"
+}
